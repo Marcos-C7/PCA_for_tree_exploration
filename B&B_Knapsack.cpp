@@ -6,7 +6,6 @@
 #include <stdio.h>
 #include <utility>
 #include <algorithm>
-#include <Windows.h>
 
 using namespace std;
 
@@ -141,6 +140,7 @@ void solve(input &in, output &out, output &best_out, int j, int current_val, int
 	}
 }
 
+/*
 output solve2(input &in)
 {
 	int		**table = new int*[2];
@@ -199,11 +199,11 @@ output solve2(input &in)
 	
 	return out;
 }
-
+*/
 
 int main(int argc, char **argv)
 {
-	string			file_name = argc > 1 ? argv[1] : "data/ks_400_0";
+	string			file_name = argc > 1 ? argv[1] : "knapsack_instances/ks_400_0";
 	ifstream		file;
 	int				n(0), K(0);
 	input			in;
@@ -215,7 +215,7 @@ int main(int argc, char **argv)
 	
 	file>>n;
 	file>>K;
-	in.K = K;
+	in.K = 14000;
 	in.alloc(n);
 	
 	for(int i = 0; i < n; ++i)
