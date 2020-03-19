@@ -215,7 +215,7 @@ int main(int argc, char **argv)
 	
 	file>>n;
 	file>>K;
-	in.K = 13000;
+	in.K = 20000;
 	in.alloc(n);
 	
 	for(int i = 0; i < n; ++i)
