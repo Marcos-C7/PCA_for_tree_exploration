@@ -6,6 +6,14 @@
 # f.write("".join(nlines))
 # f.close()
 # comenzo: 00:37:00 hrs - 12:40:41: 00:03:41
+###############################################
+# COUNT SOLUTIONS:
+# read problem.zpl
+# set emphasis counter
+# set constraints countsols collect TRUE
+# count
+# write allsolutions ks_400_0_all_sols.txt
+###############################################
 param n := read "instances/ks_400_0_parameters.txt" as "2n" skip 1 use 1;
 param K := read "instances/ks_400_0_parameters.txt" as "2n" skip 2 use 1;
 set I := {0 .. n - 1};
@@ -17,12 +25,16 @@ var x[I] binary;
 
 #######################################################################
 maximize value:
-    sum <i> in I: v[i] * x[i];
+	sum <i> in I: v[i] * x[i];
 #
 #######################################################################
 
 ########################
 subto weight_capacity:
-    sum <i> in I: w[i] * x[i] <= K;
+	sum <i> in I: w[i] * x[i] <= K;
 #
+
+subto opt_val:
+	sum <i> in I: v[i] * x[i] == 3967180;
+#S_12000=4.848 S_9486367=3.967180
 ########################
