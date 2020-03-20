@@ -12,7 +12,7 @@
 # set emphasis counter
 # set constraints countsols collect TRUE
 # count
-# write allsolutions ks_400_0_all_sols.txt
+# write allsolutions solutions/ks_400_0_K9486367_all_sols.txt
 ###############################################
 param n := read "instances/ks_400_0_parameters.txt" as "2n" skip 1 use 1;
 param K := read "instances/ks_400_0_parameters.txt" as "2n" skip 2 use 1;
